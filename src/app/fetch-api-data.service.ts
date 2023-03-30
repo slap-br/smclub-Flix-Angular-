@@ -200,6 +200,7 @@ private handleError(error: HttpErrorResponse): any {
   providedIn: 'root'
 })
 export class FetchApiDataService {
+  getAllMovies: any;
 
   constructor() { }
 }

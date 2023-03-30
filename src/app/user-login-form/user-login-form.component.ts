@@ -21,6 +21,11 @@ constructor(
 
 login(): void {
   this.fetchApiData.userLogin(this.userData).subscribe((response) => {
+    console.log(response);
+    //adicionado para salvar no localstorage (conferir se response é ok)
+    // localStorage.setItem('user', response.user.Username);
+    // localStorage.setItem('token', response.token);
+
     this.dialogRef.close(); // This will close the modal on success!
     this.snackBar.open('deu certo', 'OK', {
        duration: 2000
